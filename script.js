@@ -334,5 +334,137 @@ function inverteArray() {
 }
 
 function removerDuplicado() {
-    
+    let arr = [1, 2, 3, 4, 5, 6, 1, 2, 3]
+    let arrUnico = [...new Set(arr)]
+    console.log(arrUnico)
+}
+
+function unirArrays() {
+    let arr1 = [1, 2, 3]
+    let arr2 = [4, 5, 6]
+    let uniao = arr1.concat(arr2)
+    console.log(uniao)
+}
+
+function encontrarIndice() {
+    let arr = [10, 20, 30, 40, 50]
+    let valor = 30
+    let indice = arr.indexOf(valor)
+    console.log(indice)
+}
+
+function segundoMaior() {
+    let arr = [10, 20, 30, 40, 50]
+    arr.sort((a, b) => b - a)
+    console.log(arr[1])
+}
+
+function concatenarArray() {
+    let arr = ['Eu', 'amo', 'JavaScript']
+    let resultado = arr.join(' ')
+    console.log(resultado)
+}
+
+function maiusculas() {
+    let arr = ['banana', 'maçã', 'laranja']
+    let arrMaiusculo = arr.map(item => item.toUpperCase())
+    console.log(arrMaiusculo)
+}
+
+function contarImpares() {
+    let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    let impares = arr.filter(num => num % 2 !== 0).length
+    console.log(impares)
+}
+
+function criarPessoa() {
+    let pessoa = {
+        nome: 'João',
+        idade: 25,
+        cidade: 'São Paulo'
+    }
+    console.log(pessoa)
+}
+
+function adicionarEmail() {
+    let pessoa = {
+        nome: 'João',
+        idade: 25,
+        cidade: 'São Paulo'
+    }
+    pessoa.email = 'joao@example.com'
+    console.log(pessoa)
+}
+
+function exibirPropriedades(obj) {
+    for (let chave in obj) {
+        console.log(chave + ': ' + obj[chave])
+    }
+}
+
+function verificarPropriedade() {
+    let pessoa = {
+        nome: 'João',
+        idade: 25,
+        cidade: 'São Paulo'
+    }
+    let existe = 'idade' in pessoa
+    console.log(existe ? 'Propriedade existe' : 'Propriedade não existe')
+}
+
+function mediaIdades() {
+    let pessoas = [
+        { nome: 'João', idade: 25 },
+        { nome: 'Maria', idade: 30 },
+        { nome: 'Carlos', idade: 35 }
+    ]
+    let somaIdades = pessoas.reduce((acc, pessoa) => acc + pessoa.idade, 0)
+    let media = somaIdades / pessoas.length
+    console.log(media)
+}
+
+function somarValores() {
+    let obj = {
+        a: 10,
+        b: 20,
+        c: 30
+    }
+    let soma = Object.values(obj).reduce((acc, val) => acc + val, 0)
+    console.log(soma)
+}
+
+function criarLivro() {
+    let livro = {
+        titulo: 'O Senhor dos Anéis',
+        autor: 'J.R.R. Tolkien',
+        ano: 1954
+    }
+    console.log(`O livro "${livro.titulo}" foi escrito por ${livro.autor} e publicado em ${livro.ano}.`)
+}
+
+function removerPropriedade() {
+    let pessoa = {
+        nome: 'João',
+        idade: 25,
+        cidade: 'São Paulo'
+    }
+    delete pessoa.cidade
+    console.log(pessoa)
+}
+
+function podeDirigir() {
+    let idade = parseInt(prompt('Qual é a sua idade?'))
+    if (idade >= 18) {
+        console.log('Você pode dirigir.')
+    } else {
+        console.log('Você não pode dirigir.')
+    }
+}
+
+function formatarProduto() {
+    let produto = {
+        nome: 'Camiseta',
+        preco: 49.99
+    }
+    console.log(`Produto: ${produto.nome} | Preço: R$ ${produto.preco.toFixed(2)}`)
 }
